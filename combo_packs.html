@@ -15,50 +15,67 @@
 </head>
 <body>
 
-    <!-- nav bar -->
+<!-- nav bar -->
+<nav class="nav-bar bg-gray-100 fixed left-0 right-0 h-16 flex justify-between items-center w-full border-b-2 px-2 md:px-40 z-1000">
 
-    <nav class="nav-bar bg-gray-100 fixed left-0 right-0 h-16 flex justify-between items-center w-full border-b-2 px-2 md:px-40 z-1000">
+  <!-- Left Logo -->
+  <div class="part-1 h-full flex items-center gap-2 p-2">
+    <img src="images/logo.png" alt="logo" class="logo rounded-full h-full">
+    <h1 class="font-serif text-lg md:text-2xl">THE HAIRBOOK</h1>
+  </div>
 
-        <div class="part-1 h-full flex items-center gap-2 p-2">
-            <img src="images/logo.png" alt="logo" class="logo rounded-full h-full">
-            <h1 class="font-serif text-lg md:text-2xl">THE HAIRBOOK</h1>
-        </div>
+  <!-- Right Section -->
+  <div class="part-2 flex items-center gap-4 h-full p-2">
 
-        <button class="part-2 h-full flex items-center gap-1 p-2 rounded-4xl">
-            <h1 class="font-serif hidden md:block md:text-lg">MENU</h1>
-            <i class="ri-menu-2-line"></i>
-        </button>
+    <div class="items flex gap-2">
+      <!-- Home Icon (Image) -->
+    <a href="index.html" class="flex items-center justify-center p-2 rounded-full hover:bg-gray-200 transition">
+      <img src="images/home.png" alt="Home" class="h-6 w-6 md:h-7 md:w-7 object-contain">
+    </a>
 
-<ul class="hidden border-gray-200 nav-items flex flex-col gap-2 absolute top-16 right-0 text-center md:mr-10 border rounded-2xl bg-white z-50 shadow-xl transition-all duration-300">
-  <li class="relative hover:shadow-md transition-colors duration-200 group pb-1 flex flex-col hover:bg-gray-100">
-    <div class="flex justify-center items-center gap-1 px-4 py-2 cursor-pointer">
-      <a href="#">Hair Services</a>
-      <i class="ri-arrow-drop-down-fill pt-1"></i>
+      <!-- Book Now -->
+    <a href="contact.html" class="bg-black hidden md:block text-white px-5 py-2 rounded-full font-semibold text-sm md:text-base hover:bg-gray-800 transition">
+      Book Now
+    </a>
+  </div>
+
+    <!-- Menu Button -->
+<button id="menuBtn" class="flex items-center gap-1 px-3 py-2 rounded-full hover:bg-gray-200 transition">
+  <span class="font-serif hidden md:block md:text-lg">MENU</span>
+  <i class="ri-menu-2-line text-lg"></i>
+</button>
     </div>
 
-    <!-- Submenu -->
-<ul class="hidden group-hover:flex group-focus-within:flex flex-col gap-1 bg-white border border-gray-200 rounded-xl absolute top-full left-0 w-56 text-left shadow-lg p-2 transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0">
-      <li class="hover:bg-gray-100 px-3 py-1 transition-colors duration-200 rounded-md hover:shadow-md "><a href="services_for_men.html">Services For Men</a></li>
-      <li class="hover:bg-gray-100 px-3 py-1 transition-colors duration-200 rounded-md hover:shadow-md"><a href="services_for_women.html">Services For Women</a></li>
-      <li class="hover:bg-gray-100 px-3 py-1 transition-colors duration-200 rounded-md hover:shadow-md"><a href="other_services.html">Other Services</a></li>
-      <li class="hover:bg-gray-100 px-3 py-1 transition-colors duration-200 rounded-md hover:shadow-md"><a href="combo_packs.html">Combo Packs</a></li>
-    </ul>
-  </li>
 
-  <!-- Other links -->
-  <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="waxing_services.html">Waxing Services</a></li>
-  <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="padicure_and_manicure_services.html">Padicure & Manicure Services</a></li>
-  <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="nail_services.html">Nail Services</a></li>
-  <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="bleach_threading_bodyspa.html">Bleach | Threading | Body Spa</a></li>
-  <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="facials_cleansing_extra_pack.html">Facials | Cleansing | Extra Pack</a></li>
-  <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="pre_bridal_packages.html">Pre Bridal Packages</a></li>
-  <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="makeups.html">Makeups</a></li>
-        </ul>
+  <!-- Dropdown Menu -->
+  <ul class="hidden border-gray-200 nav-items flex flex-col gap-2 absolute top-16 right-0 text-center md:mr-10 border rounded-2xl bg-white z-50 shadow-xl transition-all duration-300">
+    <li class="relative hover:shadow-md transition-colors duration-200 group pb-1 flex flex-col hover:bg-gray-100">
+      <div class="flex justify-center items-center gap-1 px-4 py-2 cursor-pointer">
+        <a href="#">Hair Services</a>
+        <i class="ri-arrow-drop-down-fill pt-1"></i>
+      </div>
 
+      <!-- Submenu -->
+      <ul class="hidden group-hover:flex group-focus-within:flex flex-col gap-1 bg-white border border-gray-200 rounded-xl absolute top-full left-0 w-56 text-left shadow-lg p-2 transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0">
+        <li class="hover:bg-gray-100 px-3 py-1 transition-colors duration-200 rounded-md hover:shadow-md"><a href="services_for_men.html">Services For Men</a></li>
+        <li class="hover:bg-gray-100 px-3 py-1 transition-colors duration-200 rounded-md hover:shadow-md"><a href="services_for_women.html">Services For Women</a></li>
+        <li class="hover:bg-gray-100 px-3 py-1 transition-colors duration-200 rounded-md hover:shadow-md"><a href="other_services.html">Other Services</a></li>
+        <li class="hover:bg-gray-100 px-3 py-1 transition-colors duration-200 rounded-md hover:shadow-md"><a href="combo_packs.html">Combo Packs</a></li>
+      </ul>
+    </li>
 
-    </nav>
+    <!-- Other links -->
+    <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="waxing_services.html">Waxing Services</a></li>
+    <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="padicure_and_manicure_services.html">Padicure & Manicure Services</a></li>
+    <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="nail_services.html">Nail Services</a></li>
+    <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="bleach_threading_bodyspa.html">Bleach | Threading | Body Spa</a></li>
+    <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="facials_cleansing_extra_pack.html">Facials | Cleansing | Extra Pack</a></li>
+    <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="pre_bridal_packages.html">Pre Bridal Packages</a></li>
+    <li class="hover:bg-gray-100 px-4 py-2 hover:shadow-md transition-colors duration-200"><a href="makeups.html">Makeups</a></li>
+  </ul>
 
-    <!-- nav bar -->
+</nav>
+<!-- nav bar -->
 
   
 
@@ -87,6 +104,111 @@ Get the ultimate haircare experience with our specially curated combo packs — 
 </section>
 
 <!-- Hero Section-->
+
+
+<!-- COMBO PACKS SECTION -->
+<section class="bg-black text-white py-12 px-4 md:px-16">
+  <h2 class="text-3xl md:text-4xl font-bold mb-8 border-b-2 border-gray-600 inline-block uppercase">Combo Packs</h2>
+  <div class="overflow-x-auto">
+    <table class="min-w-full table-auto border border-gray-700">
+      <thead>
+        <tr class="bg-gray-800 text-left text-sm uppercase tracking-wider">
+          <th class="px-4 py-3 border border-gray-700">Service</th>
+          <th class="px-4 py-3 border border-gray-700">Price</th>
+        </tr>
+      </thead>
+      <tbody class="text-base">
+        <tr class="border-t border-gray-700">
+          <td class="px-4 py-2">Hair Cut With Head Massage (Female)</td>
+          <td class="px-4 py-2">700.00 Onwards</td>
+        </tr>
+        <tr class="border-t border-gray-700">
+          <td class="px-4 py-2">Hair Cut With Massage (Male)</td>
+          <td class="px-4 py-2">600.00 Onwards</td>
+        </tr>
+        <tr class="border-t border-gray-700">
+          <td class="px-4 py-2">Smoothing With Keratin</td>
+          <td class="px-4 py-2">8000.00 Onwards</td>
+        </tr>
+        <tr class="border-t border-gray-700">
+          <td class="px-4 py-2">Crazy Color Per Strix</td>
+          <td class="px-4 py-2">700.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="w-full bg-white py-20 px-6 md:px-20">
+
+  <!-- Section Heading -->
+  <h2 class="text-center uppercase text-[2.5rem] sm:text-[4rem] md:text-[6rem] font-extrabold font-serif text-black mb-16 leading-none">
+    Our Services
+  </h2>
+
+  <!-- Service Cards Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <!-- Card Template (Repeat this for all services) -->
+    <a href="services_for_men.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+      <img src="images/hair_services.png" alt="Hair Services" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
+        <h3 class="text-white text-xl font-semibold p-4">Hair Services</h3>
+      </div>
+    </a>
+
+    <a href="padicure_and_manicure_services.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+      <img src="images/pndm.png" alt="Padicure & Manicure Services" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
+        <h3 class="text-white text-xl font-semibold p-4">Padicure & Manicure Services</h3>
+      </div>
+    </a>
+
+    <a href="waxing_services.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+      <img src="images/waxing.png" alt="Waxing Services" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
+        <h3 class="text-white text-xl font-semibold p-4">Waxing Services</h3>
+      </div>
+    </a>
+
+    <a href="nail_services.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+      <img src="images/nails.png" alt="Nail Services" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
+        <h3 class="text-white text-xl font-semibold p-4">Nail Services</h3>
+      </div>
+    </a>
+
+    <a href="bleach_threading_bodyspa.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+      <img src="images/bleach.png" alt="Bleach, Threading, Body Spa" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
+        <h3 class="text-white text-xl font-semibold p-4">Bleach | Threading | Body Spa</h3>
+      </div>
+    </a>
+
+    <a href="facials_cleansing_extra_pack.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+      <img src="images/facials.png" alt="Facials" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
+        <h3 class="text-white text-xl font-semibold p-4">Facials | Cleansing | Extra Pack</h3>
+      </div>
+    </a>
+
+    <a href="pre_bridal_packages.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+      <img src="images/pre_bridal.png" alt="Pre Bridal Packages" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
+        <h3 class="text-white text-xl font-semibold p-4">Pre Bridal Packages</h3>
+      </div>
+    </a>
+
+    <a href="makeups.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+      <img src="images/makeups.png" alt="Makeups" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
+        <h3 class="text-white text-xl font-semibold p-4">Makeups</h3>
+      </div>
+    </a>
+
+  </div>
+</section>
 
 <!-- GALLERY SECTION -->
 <section class="bg-white text-black py-16 px-4 md:px-16">
@@ -174,109 +296,53 @@ Get the ultimate haircare experience with our specially curated combo packs — 
   </div>
 </section>
 
+<!-- Video Section -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6 md:px-12 lg:px-20">
+    
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-black">Our Videos</h2>
+      <p class="text-gray-600 mt-2">Quick looks into our services & styles</p>
+    </div>
 
-<!-- COMBO PACKS SECTION -->
-<section class="bg-black text-white py-12 px-4 md:px-16">
-  <h2 class="text-3xl md:text-4xl font-bold mb-8 border-b-2 border-gray-600 inline-block uppercase">Combo Packs</h2>
-  <div class="overflow-x-auto">
-    <table class="min-w-full table-auto border border-gray-700">
-      <thead>
-        <tr class="bg-gray-800 text-left text-sm uppercase tracking-wider">
-          <th class="px-4 py-3 border border-gray-700">Service</th>
-          <th class="px-4 py-3 border border-gray-700">Price</th>
-        </tr>
-      </thead>
-      <tbody class="text-base">
-        <tr class="border-t border-gray-700">
-          <td class="px-4 py-2">Hair Cut With Head Massage (Female)</td>
-          <td class="px-4 py-2">700.00 Onwards</td>
-        </tr>
-        <tr class="border-t border-gray-700">
-          <td class="px-4 py-2">Hair Cut With Massage (Male)</td>
-          <td class="px-4 py-2">600.00 Onwards</td>
-        </tr>
-        <tr class="border-t border-gray-700">
-          <td class="px-4 py-2">Smoothing With Keratin</td>
-          <td class="px-4 py-2">8000.00 Onwards</td>
-        </tr>
-        <tr class="border-t border-gray-700">
-          <td class="px-4 py-2">Crazy Color Per Strix</td>
-          <td class="px-4 py-2">700.00</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-
-<!-- Services Section -->
-<section class="w-full bg-white py-20 px-6 md:px-20">
-
-  <!-- Section Heading -->
-  <h2 class="text-center uppercase text-[2.5rem] sm:text-[4rem] md:text-[6rem] font-extrabold font-serif text-black mb-16 leading-none">
-    Our Services
-  </h2>
-
-  <!-- Service Cards Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
-    <!-- Card Template (Repeat this for all services) -->
-    <a href="services_for_men.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-      <img src="images/hair_services.png" alt="Hair Services" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
-        <h3 class="text-white text-xl font-semibold p-4">Hair Services</h3>
+    <!-- Videos Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Video 1 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 flex justify-center">
+        <div class="w-[280px] aspect-[9/16]">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID1"
+            title="YouTube video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
-    </a>
 
-    <a href="padicure_and_manicure_services.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-      <img src="images/pndm.png" alt="Padicure & Manicure Services" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
-        <h3 class="text-white text-xl font-semibold p-4">Padicure & Manicure Services</h3>
+      <!-- Video 2 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 flex justify-center">
+        <div class="w-[280px] aspect-[9/16]">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID2"
+            title="YouTube video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
-    </a>
 
-    <a href="waxing_services.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-      <img src="images/waxing.png" alt="Waxing Services" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
-        <h3 class="text-white text-xl font-semibold p-4">Waxing Services</h3>
+      <!-- Video 3 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 flex justify-center">
+        <div class="w-[280px] aspect-[9/16]">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID3"
+            title="YouTube video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
-    </a>
 
-    <a href="nail_services.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-      <img src="images/nails.png" alt="Nail Services" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
-        <h3 class="text-white text-xl font-semibold p-4">Nail Services</h3>
-      </div>
-    </a>
-
-    <a href="bleach_threading_bodyspa.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-      <img src="images/bleach.png" alt="Bleach, Threading, Body Spa" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
-        <h3 class="text-white text-xl font-semibold p-4">Bleach | Threading | Body Spa</h3>
-      </div>
-    </a>
-
-    <a href="facials_cleansing_extra_pack.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-      <img src="images/facials.png" alt="Facials" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
-        <h3 class="text-white text-xl font-semibold p-4">Facials | Cleansing | Extra Pack</h3>
-      </div>
-    </a>
-
-    <a href="pre_bridal_packages.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-      <img src="images/pre_bridal.png" alt="Pre Bridal Packages" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
-        <h3 class="text-white text-xl font-semibold p-4">Pre Bridal Packages</h3>
-      </div>
-    </a>
-
-    <a href="makeups.html" class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
-      <img src="images/makeups.png" alt="Makeups" class="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-110">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-300 flex items-end">
-        <h3 class="text-white text-xl font-semibold p-4">Makeups</h3>
-      </div>
-    </a>
-
+    </div>
   </div>
 </section>
 
